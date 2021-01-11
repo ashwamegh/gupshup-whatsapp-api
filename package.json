@@ -1,0 +1,10 @@
+{
+  "name": "gupshup-whatsapp-sdk",
+  "version": "0.0.1",
+  "description": "A library to help better use of GupShup WhatsApp API",
+  "main": "index.js",
+  "repository": "https://github.com/ashwamegh/gupshup-whatsapp-sdk.git",
+  "author": "Shashank Shekhar <shashank7200@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
