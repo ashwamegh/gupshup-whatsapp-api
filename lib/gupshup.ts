@@ -1,6 +1,6 @@
 'use strict'
 
-import pkg from './../package.json'
+const pkg = require('./../package.json')
 import API from './api'
 
 export default class Gupshup {
