@@ -1,1 +1,0 @@
-export const API_URL = "https://api.gupshup.io/sm/api/v1/msg"
