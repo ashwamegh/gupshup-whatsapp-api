@@ -3,10 +3,13 @@
 const pkg = require('./../package.json')
 import API from './api'
 
-export default class Gupshup {
+import Message from './resources/message'
+
+class Gupshup {
 	static VERSION = pkg.version
 	apiKey: string
 	api: InstanceType<typeof API>
+	message;
 
 	constructor(options: { apiKey: string } ) {
 		let { apiKey } = options
@@ -14,14 +17,14 @@ export default class Gupshup {
 			throw new Error('`apiKey` is mandatory')
 		}
 		this.apiKey = apiKey
-		this.api = new API({ apiKey });
+		this.api = new API({ apiKey })
 		
 		this.addResources()
 	}
 
 	addResources() {
-		Object.assign(this, {
-			
-		})
+		this.message = Message(this.api)
 	}
 }
+
+module.exports = Gupshup
