@@ -1,6 +1,7 @@
 "use strict";
 
 export interface MessagePayload {
+	[key: string]: any; // For fixing Query String type error
 	isHSM: string // true (for template message) || false (for session message)
 	type: 'text'| 'audio'| 'video'| 'file'| 'image'
 	text?: string // The text message to be sent to the customer, in case of type=text, Eg: 'Hello, World!'
@@ -11,6 +12,7 @@ export interface MessagePayload {
 }
 
 export interface MessageBody {
+	[key: string]: any; // For fixing Query String type error
 	channel: string // Eg: whatsapp
 	destination: string // Eg: 919876543210
 	source: string // Business number (from which message is sent) Eg: 917834811114
