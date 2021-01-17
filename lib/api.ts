@@ -12,9 +12,10 @@ export default class API {
 			headers: Object.assign(
 				{
 					accept: 'application/json, text/plain, */*',
-					apikey: options.apiKey,
+					apiKey: options.apiKey,
 					'Content-Type': 'application/x-www-form-urlencoded',
-					'Cache-Control': 'no-cache'
+					'Cache-Control': 'no-cache',
+					Authorization: options.apiKey
 				}
 			)
 		});
@@ -22,7 +23,8 @@ export default class API {
 	
 	async post(params: { url: string, data: object }) {
 		try {
-			return await this.client.post(params.url, params.data);
+			const { data } = await this.client.post(params.url, params.data);
+			return data;
 		} catch (error) {
 			return normalizeError(error);
 		}
