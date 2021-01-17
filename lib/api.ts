@@ -20,11 +20,19 @@ export default class API {
 			)
 		});
 	}
+
+	async get(params: { url: string }) {
+		try {
+			const { data } = await this.client.get(params.url);
+			return data;
+		} catch (error) {
+			return normalizeError(error);
+		}
+	}
 	
 	async post(params: { url: string, data: object }) {
 		try {
-			const { data } = await this.client.post(params.url, params.data);
-			return data;
+			return await this.client.post(params.url, params.data);
 		} catch (error) {
 			return normalizeError(error);
 		}
