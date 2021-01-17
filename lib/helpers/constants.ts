@@ -8,7 +8,7 @@ export function isNonNullObject(input) {
 
 export function normalizeError(err) {
 	throw {
-		statusCode: err.statusCode,
-		error: err.error.error
+		statusCode: err.response.status,
+		error: err.response.data
 	}
 }

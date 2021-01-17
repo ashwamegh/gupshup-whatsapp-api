@@ -17,7 +17,7 @@ export default function(api) {
 					})
 				})
 			} catch (error) {
-				return normalizeError(error)
+				throw error
 			}
 		}
 	}
