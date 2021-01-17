@@ -9,7 +9,7 @@
 		"cp-ts": "cp lib/gupshup.d.ts dist/",
 		"build:commonjs": "tsc",
 		"build": "npm run clean && npm run build:commonjs && npm run cp-ts",
-		"debug": "npm run build && node-debug examples/index.js"
+		"debug": "node examples/index.js"
 	},
 	"author": "Shashank Shekhar <shashank7200@gmail.com>",
 	"license": "MIT",
