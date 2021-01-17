@@ -13,7 +13,7 @@ class Gupshup {
 	message;
 	optins;
 
-	constructor(options: { apiKey: string } ) {
+	constructor(options: { apiKey: string } = { apiKey: null }) {
 		let { apiKey } = options
 		if (!apiKey) {
 			throw new Error('`apiKey` is mandatory')
