@@ -1,6 +1,5 @@
 "use strict";
 
-
 interface ContactAddress {
 	city: string // Eg: "Menlo Park",
 	country: string // Eg: "United States",
