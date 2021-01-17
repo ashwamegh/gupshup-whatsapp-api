@@ -9,6 +9,7 @@ var message_1 = __importDefault(require("./resources/message"));
 var optins_1 = __importDefault(require("./resources/optins"));
 var Gupshup = /** @class */ (function () {
     function Gupshup(options) {
+        if (options === void 0) { options = { apiKey: null }; }
         var apiKey = options.apiKey;
         if (!apiKey) {
             throw new Error('`apiKey` is mandatory');
