@@ -196,13 +196,13 @@ client.message.send({
 				}
 			],
 			urls: [
-					{
-						url: "https://www.facebook.com",
-						type: "WORK"
-					}
-				]
-			}
-}
+				{
+					url: "https://www.facebook.com",
+					type: "WORK"
+				}
+			]
+		}
+	}
 }).then((response) => {
 	console.log("Contact Card sent", response)
 }).catch(err => {
