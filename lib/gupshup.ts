@@ -4,12 +4,14 @@ const pkg = require('./../package.json')
 import API from './api'
 
 import Message from './resources/message'
+import Optins from './resources/optins'
 
 class Gupshup {
 	static VERSION = pkg.version
 	apiKey: string
 	api: InstanceType<typeof API>
 	message;
+	optins;
 
 	constructor(options: { apiKey: string } ) {
 		let { apiKey } = options
@@ -24,6 +26,7 @@ class Gupshup {
 
 	addResources() {
 		this.message = Message(this.api)
+		this.optins = Optins(this.api)
 	}
 }
 
