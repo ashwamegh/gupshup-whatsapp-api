@@ -1,5 +1,7 @@
 # Gupshup WhatsApp API
 
+[![npm](https://img.shields.io/npm/v/gupshup-whatsapp-api.svg?maxAge=2592000?style=flat-square)](https://www.npmjs.com/package/gupshup-whatsapp-api)
+
 ## About
 
 This is an unofficial library to leverage Gupshup Whatsapp API (v2) to be able to send Outbound messages of types (text, templates, video, audio, location, contact card, stickers, images) and fetch/send the opt-in requests to the users and the opted-in users list.
