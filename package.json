@@ -1,7 +1,7 @@
 {
 	"name": "gupshup-whatsapp-api",
 	"version": "1.0.0",
-	"description": "An unofficial library to help with the use of GupShup WhatsApp APIs",
+	"description": "An unofficial library to help with the usage of GupShup WhatsApp APIs(v2) for messages and user opt-ins",
 	"main": "dist/gupshup",
 	"typings": "dist/gupshup",
 	"scripts": {
