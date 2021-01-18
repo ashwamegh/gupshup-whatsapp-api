@@ -4,7 +4,7 @@
 
 This is an unofficial library to leverage Gupshup Whatsapp API to be able to send Outbound messages of types (text, templates, video, audio, location, contact card, stickers, images).
 
-> Note: It dooes not connect with the Inbound APIs (that are responsible for receiving messages from customers)
+> Note: It dooes not connect with the Inbound APIs (that are responsible for receiving messages from customers through webhooks)
 
 ## Installation
 
