@@ -31,84 +31,84 @@ let client = new Gupshup({
 ## Options
 
 ### Request Body
-| Property      | Type          | Default       | Description | Required |
-| ------------- | ------------- | ------------- | ----------- | -------- |
-| `channel` | `string` |  | The channel name, i.e.`whatsapp` | true |
-| `destination` | `string` |  | Customer's Whatsapp number | true |
-| `source` | `string` |  | Your Whatsapp business number | true |
-| `message` | [Message Payload](#message-payload) |  | Payload for the sending message | true |
-| `src.name` | `string` |  | Your whatsapp application name | false (required for sandbox apps) |
+| Property      | Type          | Description | Required |
+| ------------- | ------------- | ----------- | -------- |
+| `channel` | `string` | The channel name, i.e.`whatsapp` | true |
+| `destination` | `string` | Customer's Whatsapp number | true |
+| `source` | `string` | Your Whatsapp business number | true |
+| `message` | [Message Payload](#message-payload) | Payload for the sending message | true |
+| `src.name` | `string` | Your whatsapp application name | false (required for sandbox apps) |
 
 ### Message Payload
-| Property      | Type          | Default       | Description | Required |
-| ------------- | ------------- | ------------- | ----------- | -------- |
-| `isHSM` | `string` |  | `true` (for template message) and `false` (for session message) | false |
-| `type` | `string` |  | Whatsapp message type( `text`, `audio`, `video`, `file`, `image` , `location`, `contact`, `sticker`) | true |
-| `text` | `string` |  | The text message to be sent to the customer, in case of `type=text` | false |
-| `url` | `string` |  | The public URL where the file / audio / video attachment to be sent to the customer is hosted | false |
-| `originalUrl` | `string` |  | The public URL where the image to be sent to the customer is hosted. Only to be sent for `type = image` | false |
-| `previewUrl` | `string` |  | The public URL where a thumbnail of the image to be sent to the customer is hosted. Only to be sent for `type = image` | false |
-| `caption` | `string` |  | Add caption to media messages, applicable to media `type = image|video|file` | false |
-| `longitude` | `number` |  | To be sent for `type = location` | false |
-| `latitude` | `number` |  | To be sent for `type = location` | false |
-| `name` | `string` |  | Name of the location. Only to be sent for `type = location` | false |
-| `address` | `string` |  | Postal address of the location. Only to be sent for `type = location` | false |
-| `contact` | [Contact Card](#contact-card) |  | Contact details to be sent when `type = contact` | false |
+| Property      | Type          | Description | Required |
+| ------------- | ------------- | ----------- | -------- |
+| `isHSM` | `string` | `true` (for template message) and `false` (for session message) | false |
+| `type` | `string` | Whatsapp message type( `text`, `audio`, `video`, `file`, `image` , `location`, `contact`, `sticker`) | true |
+| `text` | `string` | The text message to be sent to the customer, in case of `type=text` | false |
+| `url` | `string` | The public URL where the file / audio / video attachment to be sent to the customer is hosted | false |
+| `originalUrl` | `string` | The public URL where the image to be sent to the customer is hosted. Only to be sent for `type = image` | false |
+| `previewUrl` | `string` | The public URL where a thumbnail of the image to be sent to the customer is hosted. Only to be sent for `type = image` | false |
+| `caption` | `string` | Add caption to media messages, applicable to media `type = image|video|file` | false |
+| `longitude` | `number` | To be sent for `type = location` | false |
+| `latitude` | `number` | To be sent for `type = location` | false |
+| `name` | `string` | Name of the location. Only to be sent for `type = location` | false |
+| `address` | `string` | Postal address of the location. Only to be sent for `type = location` | false |
+| `contact` | [Contact Card](#contact-card) | Contact details to be sent when `type = contact` | false |
 
 ### Contact Card
-| Property      | Type          | Default       | Description | Required |
-| ------------- | ------------- | ------------- | ----------- | -------- |
-| `addresses` | [[Contact Address](#contact-address)] |  | Contact address for the person | false |
-| `birthday` | `string` |  | Person's date of birth | true |
-| `emails` | [[Contact Email](#contact-email)] |  | Person's email or emails | true |
-| `name` | [Contact Name](#contact-name) |  | Person's first, last and formatted name | true |
-| `org` | [Contact Organization](#contact-organization) |  | Person's organization details | true  |
-| `phones` | [[Contact Phone](#contact-phone)] |  | Person's contact phone numbers | true |
-| `url` | [[Contact URL](#contact-url)] |  | Person's contact URLs | true |
+| Property      | Type          | Description | Required |
+| ------------- | ------------- | ----------- | -------- |
+| `addresses` | [[Contact Address](#contact-address)] | Contact address for the person | false |
+| `birthday` | `string` | Person's date of birth | true |
+| `emails` | [[Contact Email](#contact-email)] | Person's email or emails | true |
+| `name` | [Contact Name](#contact-name) | Person's first, last and formatted name | true |
+| `org` | [Contact Organization](#contact-organization) | Person's organization details | true  |
+| `phones` | [[Contact Phone](#contact-phone)] | Person's contact phone numbers | true |
+| `url` | [[Contact URL](#contact-url)] | Person's contact URLs | true |
 
 ### Contact Address
-| Property      | Type          | Default       | Description | Required |
-| ------------- | ------------- | ------------- | ----------- | -------- |
-| `city` | `string` |  | Eg: "Menlo Park" | true |
-| `country` | `string` |  | Eg: "United States" | true |
-| `countryCode` | `string` |  | Eg: "us" | true |
-| `state` | `string` |  | Eg: "CA" | true |
-| `street` | `string` |  | Eg: "1 Hacker Way" | true |
-| `type` | `string` |  | Eg: "HOME" | true |
-| `zip` | `string` |  | Eg: "94025" | true |
+| Property      | Type          | Description | Required |
+| ------------- | ------------- | ----------- | -------- |
+| `city` | `string` | Eg: "Menlo Park" | true |
+| `country` | `string` | Eg: "United States" | true |
+| `countryCode` | `string` | Eg: "us" | true |
+| `state` | `string` | Eg: "CA" | true |
+| `street` | `string` | Eg: "1 Hacker Way" | true |
+| `type` | `string` | Eg: "HOME" | true |
+| `zip` | `string` | Eg: "94025" | true |
 
 ### Contact Email
-| Property      | Type          | Default       | Description | Required |
-| ------------- | ------------- | ------------- | ----------- | -------- |
-| `email` | `string` |  | Eg: "test@fb.com" | true |
-| `type` | `string` |  | Eg: "WORK" | true |
+| Property      | Type          | Description | Required |
+| ------------- | ------------- | ----------- | -------- |
+| `email` | `string` | Eg: "test@fb.com" | true |
+| `type` | `string` | Eg: "WORK" | true |
 
 ### Contact Name
-| Property      | Type          | Default       | Description | Required |
-| ------------- | ------------- | ------------- | ----------- | -------- |
-| `firstName` | `string` |  | Eg: "John" | true |
-| `formattedName` | `string` |  | Eg: "John Smith" | true |
-| `lastName` | `string` |  | Eg: "Smith"| true |
+| Property      | Type          | Description | Required |
+| ------------- | ------------- | ----------- | -------- |
+| `firstName` | `string` | Eg: "John" | true |
+| `formattedName` | `string` | Eg: "John Smith" | true |
+| `lastName` | `string` | Eg: "Smith"| true |
 
 ### Contact Organization
-| Property      | Type          | Default       | Description | Required |
-| ------------- | ------------- | ------------- | ----------- | -------- |
-| `company` | `string` |  | Eg: "WhatsApp" | true |
-| `department` | `string` |  | Eg: "Design" | true |
-| `title` | `string` |  | Eg: "Manager" | true |
+| Property      | Type          | Description | Required |
+| ------------- | ------------- | ----------- | -------- |
+| `company` | `string` | Eg: "WhatsApp" | true |
+| `department` | `string` | Eg: "Design" | true |
+| `title` | `string` | Eg: "Manager" | true |
 
 ### Contact Phone
-| Property      | Type          | Default       | Description | Required |
-| ------------- | ------------- | ------------- | ----------- | -------- |
-| `phone` | `string` |  | Eg: "+1 (650) 555-1234" | true |
-| `type` | `string` |  | Eg: "WORK" | true |
-| `wa_id` | `string` |  | Eg: "16505551234" | false |
+| Property      | Type          | Description | Required |
+| ------------- | ------------- | ----------- | -------- |
+| `phone` | `string` | Eg: "+1 (650) 555-1234" | true |
+| `type` | `string` | Eg: "WORK" | true |
+| `wa_id` | `string` | Eg: "16505551234" | false |
 
 ### Contact URL
-| Property      | Type          | Default       | Description | Required |
-| ------------- | ------------- | ------------- | ----------- | -------- |
-| `url` | `string` |  | Eg: "https://www.facebook.com" | true |
-| `type` | `string` |  | Eg: "WORK" | true |
+| Property      | Type          | Description | Required |
+| ------------- | ------------- | ----------- | -------- |
+| `url` | `string` | Eg: "https://www.facebook.com" | true |
+| `type` | `string` | Eg: "WORK" | true |
 
 
 ## Supported Resources
