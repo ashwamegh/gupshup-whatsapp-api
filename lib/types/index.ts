@@ -54,7 +54,7 @@ export interface MessagePayload {
 	type: 'text'| 'audio'| 'video'| 'file'| 'image' | 'location'| 'contact'| 'sticker'
 	text?: string // The text message to be sent to the customer, in case of type=text, Eg: 'Hello, World!'
 	url?: string // The public URL where the file / audio / video attachment to be sent to the customer is hosted, Eg: https://file-examples.com/wp-content/uploads/2017/11/file_example_MP3_700KB.mp3
-	originalUrl?: string // he public URL where the image to be sent to the customer is hosted. Only to be sent for type = image, Eg: https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg
+	originalUrl?: string // The public URL where the image to be sent to the customer is hosted. Only to be sent for type = image, Eg: https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg
 	previewUrl?: string // The public URL where a thumbnail of the image to be sent to the customer is hosted. Only to be sent for type = image, Eg: https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg
 	caption?: string // Add caption to media messages, applicable to media type = image|video|file, Eg: Media caption text,
 
@@ -65,7 +65,7 @@ export interface MessagePayload {
 	address?: string // "Postal address"
 
 	// For Sending Contact Card
-	contact: ContactCard
+	contact?: ContactCard
 }
 
 export interface MessageBody {
