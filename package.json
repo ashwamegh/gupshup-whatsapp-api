@@ -19,6 +19,9 @@
 		"type": "git",
 		"url": "https://github.com/ashwamegh/gupshup-whatsapp-api.git"
 	},
+	"files": [
+		"dist/*"
+	],
 	"devDependencies": {
 		"@types/node": "^14.14.21",
 		"babel-cli": "^6.26.0",
