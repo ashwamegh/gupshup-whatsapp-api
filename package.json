@@ -18,7 +18,7 @@
 	"private": false,
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/ashwamegh/gupshup-whatsapp-sdk.git"
+		"url": "https://github.com/ashwamegh/gupshup-whatsapp-api.git"
 	},
 	"devDependencies": {
 		"@types/node": "^14.14.21",

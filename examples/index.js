@@ -1,4 +1,4 @@
-const Gupshup = require('gupshup-whatsapp-sdk');
+const Gupshup = require('gupshup-whatsapp-api');
 
 const client = new Gupshup({
 	apiKey: 'YOUR_API_KEY'
