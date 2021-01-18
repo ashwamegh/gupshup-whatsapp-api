@@ -5,7 +5,6 @@
 	"main": "dist/gupshup",
 	"typings": "dist/gupshup",
 	"scripts": {
-		"prepublish": "npm test",
 		"clean": "rm -rf dist && mkdir dist",
 		"cp-ts": "cp lib/gupshup.d.ts dist/",
 		"build:commonjs": "tsc",
