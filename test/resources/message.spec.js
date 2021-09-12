@@ -195,4 +195,19 @@ describe('MESSAGES', () => {
 			done();
 		}).catch(err => done(new Error(JSON.stringify(err))))
 	}).timeout(5000)
+
+	it('Should be able to send message with quick reply options', (done) => {
+		gupshupInstance.message.send({
+			...messagePrefix,
+			message : {
+				type: "quick_reply",
+				msgid: "qr1",
+				content: {type:"text", header:"Hello", text:"Hello testing", caption:"Select one option"},
+				options: [{type:"text", title:"First"},{type:"text", title:"Second"}, {type:"text", title:"Third"}]
+			}
+		}).then((result) => {
+			assert.equal(result.status, 'submitted');
+			done();
+		}).catch(err => done(new Error(JSON.stringify(err))))
+	}).timeout(5000)
 })
