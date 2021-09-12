@@ -260,3 +260,20 @@ client.optins.sendUserOptinRequest({
 	console.log("Optin request error: ", err)
 })
 
+// Send Quick-Reply Option Message
+client.message.send({
+	channel : "whatsapp",
+	source : "917834811114",
+	destination : "919876543210",
+	'src.name': "GupshupAppTest",
+	message : {
+		type: "quick_reply",
+		msgid: "qr1",
+		content: {type:"text", header:"Hello", text:"Hello testing", caption:"Select one option"},
+		options: [{type:"text", title:"First"},{type:"text", title:"Second"}, {type:"text", title:"Third"}]
+	}
+}).then((response) => {
+	console.log("Quick reply message sent", response)
+}).catch(err => {
+	console.log("Quick reply message err:", err)
+})

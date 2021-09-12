@@ -5,8 +5,8 @@
 	"main": "dist/gupshup",
 	"typings": "dist/gupshup",
 	"scripts": {
-		"clean": "rm -rf dist && mkdir dist",
-		"cp-ts": "cp lib/gupshup.d.ts dist/",
+		"clean": "rmdir /s dist && mkdir dist",
+		"cp-ts": "copy lib\\gupshup.d.ts dist\\",
 		"build:commonjs": "tsc",
 		"build": "npm run clean && npm run build:commonjs && npm run cp-ts",
 		"debug": "node examples/index.js",
