@@ -51,7 +51,7 @@ interface ContactCard {
 export interface MessagePayload {
 	[key: string]: any; // For fixing Query String type error
 	isHSM?: string // true (for template message) || false (for session message)
-	type: 'text'| 'audio'| 'video'| 'file'| 'image' | 'location'| 'contact'| 'sticker'
+	type: 'text'| 'audio'| 'video'| 'file'| 'image' | 'location'| 'contact'| 'sticker' | 'quick-reply'
 	text?: string // The text message to be sent to the customer, in case of type=text, Eg: 'Hello, World!'
 	url?: string // The public URL where the file / audio / video attachment to be sent to the customer is hosted, Eg: https://file-examples.com/wp-content/uploads/2017/11/file_example_MP3_700KB.mp3
 	originalUrl?: string // The public URL where the image to be sent to the customer is hosted. Only to be sent for type = image, Eg: https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg
